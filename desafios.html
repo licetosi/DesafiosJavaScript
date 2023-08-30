@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt - br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+</head>
+
+<body>
+    <!-- <script> -->
+
+
+
+
+
+
+
+        
+    <!-- // EXERCÍCIO1: Lista de Compras
+
+        // Maria está indo ao supermercado. Ela tem uma lista de itens para comprar. Ajude Maria a criar
+        // um programa que permita que ela adicione cada item à sua lista de compras. No final, exiba a
+        // lista completa de compras.
+
+        // //armazena os itens da lista
+        // let lista = [];
+        // //adicionar novo item
+        // function adicionarItem() {
+        //     let novoItem = prompt("Digite o nome da nova compra:");
+        //     lista.push(novoItem);
+        //     alert("Item adicionado à sua lista: " + novoItem);
+        // }
+
+        // // Função para exibir a lista de itens
+        // function exibirEstoque() {
+        //     if (lista.length === 0) {
+        //         alert("A lista está vazia.");
+        //         return;
+        //     }
+
+        //     let listaItens = "Itens na lista:\n";
+        //     lista.forEach(function (item, index) {
+        //         listaItens += index + ": " + item + "\n";
+        //     });
+
+        //     alert(listaItens);
+        // }
+
+        // // Loop para executar o programa até que o usuário decida sair
+        // while (true) {
+        //     let opcao = prompt("Maria, escolha uma opção:\n1. Adicionar item\n2. Ver a lista");
+
+        //     switch (opcao) {
+        //         case "1":
+        //             adicionarItem();
+        //             break;
+
+        //         case "2":
+        //             exibirEstoque();
+        //             break;
+
+        //         default:
+        //             alert("Opção inválida.");
+        //     }
+        // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     //     EXERCÍCIO 2 -->
+
+    <!-- // Carlos está organizando sua agenda semanal. Ele quer criar um programa para adicionar os
+        // eventos que ele precisa participar em cada dia da semana. Ajude Carlos a criar um calendário
+        // de eventos usando arrays para cada dia da semana e exiba os eventos planejados. --> 
+
+    <!-- // let planejamento = {
+        //     domingo: [],
+        //     segunda: [],
+        //     terça: [],
+        //     quarta: [],
+        //     quinta: [],
+        //     sexta: [],
+        //     sábado: []
+        // };
+
+        // // Define um array com os nomes dos dias da semana em ordem
+        // let week = ["segunda", "terça", "quarta", "quinta", "sexta", "sábado", "domingo"];
+
+        // // Loop que continuará indefinidamente até que o usuário decida sair
+        // while (true) {
+        //     // Solicita ao usuário que escolha uma opção
+        //     let opcao = prompt("Escolha uma opção:\n1. Adicionar evento;\n2. Ver eventos por dia;\n3. Ver todos os compromissos;\n4. Sair");
+
+        //     // Estrutura de decisão baseada na opção escolhida pelo usuário
+        //     switch (opcao) {
+        //         case "1":
+        //             // Solicita ao usuário que escolha o dia para adicionar um evento
+        //             let diaEscolhido = prompt("Escolha o dia que você deseja planejar:\n1. Domingo;\n2. Segunda-feira;\n3. Terça-feira;\n4. Quarta-feira;\n5. Quinta-feira;\n6. Sexta-feira;\n7. Sábado;");
+        //             // Solicita ao usuário que digite um evento para o dia escolhido
+        //             let compromisso = prompt(`Digite um evento para ${week[parseInt(diaEscolhido) - 1]}:`);
+        //             // Adiciona o evento ao array correspondente no objeto de planejamento
+        //             planejamento[week[parseInt(diaEscolhido) - 1]].push(compromisso);
+        //             // Mostra um alerta confirmando a adição do evento
+        //             alert(`Você adicionou '${compromisso}' para ${week[parseInt(diaEscolhido) - 1]}`);
+        //             break;
+        //         case "2":
+        //             // Solicita ao usuário que escolha o dia para ver os eventos
+        //             let diaMostrar = prompt("Escolha o dia que você deseja ver:\n1. Domingo;\n2. Segunda-feira;\n3. Terça-feira;\n4. Quarta-feira;\n5. Quinta-feira;\n6. Sexta-feira;\n7. Sábado;");
+        //             // Obtém os eventos para o dia escolhido
+        //             let eventosDia = planejamento[week[parseInt(diaMostrar) - 1]];
+        //             // Cria uma mensagem a ser exibida de acordo com os eventos do dia
+        //             let mensagemDia = eventosDia.length > 0 ? `Eventos em ${week[parseInt(diaMostrar) - 1]}: ${eventosDia.join(", ")}` : `Nenhum evento registrado em ${week[parseInt(diaMostrar) - 1]}.`;
+        //             // Mostra um alerta com os eventos do dia escolhido
+        //             alert(mensagemDia);
+        //             break;
+        //         case "3":
+        //             // Inicializa uma string para armazenar todos os compromissos
+        //             let todosCompromissos = "";
+        //             // Percorre os dias da semana no objeto de planejamento
+        //             for (let dia in planejamento) {
+        //                 // Verifica se há compromissos para o dia atual
+        //                 if (planejamento[dia].length > 0) {
+        //                     // Adiciona os compromissos do dia à string de todos os compromissos
+        //                     todosCompromissos += `${week.indexOf(dia) + 1}. ${dia}: ${planejamento[dia].join(", ")}\n`;
+        //                 }
+        //             }
+        //             // Mostra um alerta com todos os compromissos por dia
+        //             if (todosCompromissos !== "") {
+        //                 alert("Compromissos em cada dia:\n" + todosCompromissos);
+        //             } else {
+        //                 alert("Nenhum compromisso registrado.");
+        //             }
+        //             break;
+        //         case "4":
+        //             // Encerra o loop e encerra o planejamento
+        //             alert("Encerrando o planejamento.");
+        //             break;
+        //         default:
+        //             // Mostra um alerta se o usuário escolher uma opção inválida
+        //             alert("Opção inválida.");
+        //     }
+
+        //     // Verifica se o usuário escolheu sair (opção 4)
+        //     if (opcao === "4") {
+        //         break;
+        //     }
+        // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//         EXERCÍCIO 3: Coleção de Livros -->
+
+    <!-- // Ana ama ler e está construindo sua coleção de livros. Crie um programa para Ana registrar os
+// títulos dos livros que ela possui. No final, exiba a lista completa de livros. -->
+
+
+    <!-- <h1>Livros da Ana</h1>
+
+    <label for="item">Novo Livro:</label>
+    <input type="text" id="item">
+    <button onclick="adicionarItem()">Adicionar</button>
+
+
+
+    <button onclick="mostrarEstoque()">Mostrar Lista de Livro</button>
+
+    <div id="output"></div>
+
+    <script>
+        let estoque = [];
+        let outputDiv = document.getElementById("output");
+
+        function adicionarItem() {
+            let novoItem = document.getElementById("item").value;
+            estoque.push(novoItem);
+            outputDiv.innerHTML = "Livro adicionado a Lista: " + novoItem;
+        }
+
+        function removerItem() {
+            let itemRemover = document.getElementById("itemRemover").value;
+            let index = estoque.indexOf(itemRemover);
+
+            if (index !== -1) {
+                estoque.splice(index, 1);
+                outputDiv.innerHTML = "Livro removido da Lista: " + itemRemover;
+            } else {
+                outputDiv.innerHTML = "Livro não encontrado na lista.";
+            }
+        }
+
+        function mostrarEstoque() {
+            if (estoque.length === 0) {
+                outputDiv.innerHTML = "A lista está vazia.";
+            } else {
+                let listaItens = "Livros na Lista:<br>";
+                for (let i = 0; i < estoque.length; i++) {
+                    listaItens += (i + 1) + ". " + estoque[i] + "<br>";
+                }
+                outputDiv.innerHTML = listaItens;
+            }
+        }
+    </script>
+</body>
+
+</html> -->
