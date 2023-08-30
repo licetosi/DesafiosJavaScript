@@ -11,7 +11,7 @@
     <!-- <script> -->
 
 
-    <!-- // EXERCÍCIO1: Lista de Compras
+    <!-- // EXERCÍCIO 1: Lista de Compras
 
         // Maria está indo ao supermercado. Ela tem uma lista de itens para comprar. Ajude Maria a criar
         // um programa que permita que ela adicione cada item à sua lista de compras. No final, exiba a
@@ -154,19 +154,7 @@
         //         break;
         //     }
         // }
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
 
 
 
@@ -225,7 +213,13 @@
     </script> -->
 
 
-    <!-- Exercício 4: Jogo de Cartas
+
+
+
+
+
+
+    <!-- EXERCÍCIO 4: Jogo de Cartas
     Pedro e seus amigos estão jogando um jogo de cartas. Crie um programa que represente as
     cartas de um baralho usando arrays. Em seguida, distribua 5 cartas aleatórias para cada
     jogador e exiba as mãos de todos. -->
@@ -348,12 +342,9 @@
 
 
 
-    <!-- Exercício 6: Controle de Gastos
+    <!-- EXERCÍCIO 6: Controle de Gastos
     Fernanda quer controlar seus gastos mensais. Crie um programa que permita que ela insira
     seus gastos diários em um array. No final do mês, exiba a soma total dos gastos. -->
-
-
-
 
     <!-- <h1>Controle de Gastos Mensais</h1>
 
@@ -409,7 +400,227 @@
  -->
 
 
+    <!-- EXERCÍCIO 7: Ranking de Pontuações
+ Lucas e seus amigos estão jogando videogame e querem manter um ranking de pontuações.
+ Crie um programa que permita que eles adicionem suas pontuações em um array. No final do
+ dia, exiba o ranking com as pontuações ordenadas de forma decrescente. -->
 
+
+    <!-- <script>
+        function ordenarDecrescente(array) {
+            return array.sort((a, b) => b - a);
+        }
+
+        // Função principal
+        function ABCD() {
+            const pontuacoes = [];
+            // Array para armazenar as pontuações
+
+            const numJogadores = parseInt(prompt("Quantos jogadores têm pontuações para adicionar?"));
+
+            for (let i = 0; i < numJogadores; i++) {
+                const pontuacao = parseInt(prompt(`Digite a pontuação do jogador ${i + 1}:`));
+                pontuacoes.push(pontuacao);
+            }
+
+            // Ordena as pontuações em ordem decrescente
+            ordenarDecrescente(pontuacoes);
+
+            // Exibe o ranking de pontuações
+            alert("\nRanking de Pontuações:");
+            for (let i = 0; i < pontuacoes.length; i++) {
+                alert(`Posição ${i + 1}: Pontuação ${pontuacoes[i]}`);
+            }
+        }
+
+        // Chama a função principal
+        ABCD();
+    </script> -->
+
+
+
+
+    <!-- EXECÍCIO 8: Previsão do Tempo
+
+ Marina é uma entusiasta do clima. Crie um programa que represente a temperatura de cada
+ dia da semana usando um array. Em seguida, exiba a previsão semanal de temperatura para
+ que Marina possa se preparar. -->
+
+    <!-- <script>
+ let diasSemana = ["Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado", "Domingo"];
+ 
+ // Array de temperaturas
+ let temperaturas = [];
+ 
+ // Preencher as temperaturas para cada dia da semana
+
+ for (let i = 0; i < diasSemana.length; i++) {
+     let temperatura = parseFloat(prompt(`Digite a temperatura para ${diasSemana[i]}: `));
+     temperaturas.push(temperatura);
+ }
+ 
+ // Exibir a previsão semanal de temperatura
+
+ alert("\nPrevisão Semanal de Temperatura:");
+ for (let i = 0; i < diasSemana.length; i++) {
+     alert(`${diasSemana[i]}: ${temperaturas[i]}°C`);
+ }
+
+
+</script> -->
+
+
+
+
+
+    <!-- EXERCÍCIO 9: Cadastro de Alunos
+ Uma escola deseja cadastrar seus alunos. Crie um programa que permita adicionar nome e
+ idade de cada aluno em arrays separados. No final, exiba a lista de alunos com suas respectivas
+ idades. -->
+
+    <!-- <p>Insira o nome e a idade de cada aluno:</p>
+    <input type="text" id="nameInput" placeholder="Nome">
+    <input type="number" id="ageInput" placeholder="Idade">
+    <button id="addStudentButton">Adicionar Aluno</button>
+    <h2>Lista de Alunos:</h2>
+    <ul id="studentList"></ul>
+
+    <script>
+        const nameInput = document.getElementById('nameInput');
+        const ageInput = document.getElementById('ageInput');
+        const addStudentButton = document.getElementById('addStudentButton');
+        const studentList = document.getElementById('studentList');
+        const studentNames = [];
+        const studentAges = [];
+
+        addStudentButton.addEventListener('click', () => {
+            const name = nameInput.value.trim();
+            const age = parseInt(ageInput.value);
+            if (name !== '' && !isNaN(age) && age > 0) {
+                studentNames.push(name);
+                studentAges.push(age);
+                nameInput.value = '';
+                ageInput.value = '';
+                updateStudentList();
+            }
+        });
+
+        function updateStudentList() {
+            studentList.innerHTML = '';
+            for (let i = 0; i < studentNames.length; i++) {
+                const studentItem = document.createElement('li');
+                studentItem.textContent = `${studentNames[i]} - ${studentAges[i]} anos`;
+                studentList.appendChild(studentItem);
+            }
+        }
+    </script> -->
+
+
+
+
+
+
+
+
+
+    <!-- //  EXERCÍCIO 10: Playlist de Músicas
+
+    //  Paulo está organizando sua playlist de músicas para uma festa. Crie um programa que permita
+    // que ele adicione músicas à sua playlist usando um array. No final, exiba a lista completa de
+    // músicas -->
+
+
+
+    <!-- <h1>Playlist das Músicas</h1>
+    // <br>
+
+    // <label for="item">Nova Música:</label>
+    // <input type="text" id="item">
+    // <button onclick="adicionarItem()">Adicionar</button>
+
+
+
+    // <button onclick="mostrarPlaylist()">Mostrar Playlist</button>
+
+    // <div id="output"></div>
+
+
+    // <script>
+    //     let listadafazeres = [];
+    //     let outputDiv = document.getElementById("output");
+
+    //     function adicionarItem() {
+    //         let novoItem = document.getElementById("item").value;
+    //         listadafazeres.push(novoItem);
+    //         outputDiv.innerHTML = "Música adicionada à Lista: " + novoItem;
+    //     }
+
+    //     function removerItem() {
+    //         let itemRemover = document.getElementById("itemRemover").value;
+    //         let index = listadafazeres.indexOf(itemRemover);
+
+    //         if (index !== -1) {
+    //             listadafazeres.splice(index, 1);
+    //             outputDiv.innerHTML= "Item removido da Lista: " + itemRemover;
+    //         } else {
+    //             outputDiv.innerHTML = "Item não encontrado na lista.";
+    //         }
+    //     }
+
+    //     function mostrarPlaylist() {
+    //         if (listadafazeres.length === 0) {
+    //             outputDiv.innerHTML = "A lista está vazia.";
+    //         } else {
+    //             let listaItens = "Itens da Lista:<br>";
+    //             for (let i = 0; i < listadafazeres.length; i++) {
+    //                 listaItens += (i + 1) + ". " + listadafazeres[i] + "<br>";
+    //             }
+    //             outputDiv.innerHTML = listaItens;
+    //         }
+    //     }
+    // </script>
+
+
+
+// <style>
+        // input {
+        // border-radius: 100px;
+        // margin: 400px 0px 0px 750px;
+
+        // }
+
+        // button {
+        // border-radius: 100px;
+        // font-size: larger;
+
+        // font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        // }
+
+        // #item {
+        // font-size: larger;
+        // }
+
+        // label {
+        // position: absolute;
+        // margin: 405px 0px 0px 650px;
+
+        // }
+
+        // h1 {
+        // position: absolute;
+        // margin: 345px 0px 0px 790px;
+        // font-size: 300%;
+        // color: rgb(0, 0, 0);
+        // }
+
+        // body {
+        // font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        // }
+
+
+        //
+        </style > -->
 
 </body>
+
 </html>
